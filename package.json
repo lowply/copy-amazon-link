@@ -1,0 +1,28 @@
+{
+  "name": "get-amazon-link",
+  "version": "0.0.1",
+  "description": "Get the short URL of the current product in Amazon",
+  "main": "main.js",
+  "scripts": {
+    "compile": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowply/copy-amazon-link.git"
+  },
+  "keywords": [
+    "amazon",
+    "bookmarklet"
+  ],
+  "author": "Sho Mizutani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lowply/copy-amazon-link/issues"
+  },
+  "homepage": "https://github.com/lowply/copy-amazon-link#readme",
+  "dependencies": {
+    "encodeurl": "^1.0.2",
+    "strip-indent": "^3.0.0",
+    "terser": "^4.3.1"
+  }
+}
