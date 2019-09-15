@@ -2,6 +2,6 @@
 
 Drag this link to your bookmark bar to save the bookmarklet:
 
-<a href="javascript:(()=>{const o=window.location.href;if(o.indexOf("https://www.amazon")<0)return console.log("This bookmarklet only works on Amazon"),!1;const e=o.match(/^https?:\/{2,}(.*?)(?:\/|\?|#|$)/)[1],n=document.querySelector("#ASIN");if(null==n)return console.log("ASIN not found"),!1;let t=document.createElement("textarea");t.value=e+"/dp/"+n.value,document.body.appendChild(t),t.select(),document.execCommand("copy"),console.log("Amazon link "+t.value+" has been copied to your clipboard!"),t.remove()})();">Copy Amazon link</a>
+[Copy Amazon link](javascript:(()=%3E%7Bconst%20o=window.location.href;if(o.indexOf(%22https://www.amazon%22)%3C0)return%20console.log(%22This%20bookmarklet%20only%20works%20on%20Amazon%22),!1;const%20e=o.match(/%5Ehttps?:%5C/%7B2,%7D(.*?)(?:%5C/%7C%5C?%7C#%7C$)/)%5B1%5D,n=document.querySelector(%22#ASIN%22);if(null==n)return%20console.log(%22ASIN%20not%20found%22),!1;let%20t=document.createElement(%22textarea%22);t.value=e+%22/dp/%22+n.value,document.body.appendChild(t),t.select(),document.execCommand(%22copy%22),console.log(%22Amazon%20link%20%22+t.value+%22%20has%20been%20copied%20to%20your%20clipboard!%22),t.remove()%7D)();)
 
 See [github.com/lowply/copy-amazon-link](https://github.com/lowply/copy-amazon-link) for more information.

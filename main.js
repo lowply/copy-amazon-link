@@ -6,7 +6,7 @@ const ejs = require('ejs');
 
 function main() {
     const code = fs.readFileSync("src/bookmarklet.js", {encoding: "utf-8"});
-    const minified = Terser.minify(code, {warnings: true}).code;
+    const minified = encodeURI(Terser.minify(code, {warnings: true}).code);
     ejs.renderFile("src/index.ejs", {src: minified}, function(err, out){
         if (err != null) {
             console.log(err);
