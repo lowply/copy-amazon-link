@@ -1,4 +1,4 @@
-javascript:(function(){
+javascript: (() => {
 	const url = window.location.href;
 
     if (url.indexOf("https://www.amazon") < 0) {
@@ -7,15 +7,15 @@ javascript:(function(){
 	}
 
     const site = url.match(/^https?:\/{2,}(.*?)(?:\/|\?|#|$)/)[1];
-	const selected = document.getElementById("ASIN");
+	const asin = document.querySelector("#ASIN");
 
-    if (selected == null){
+    if (asin == null){
         console.log("ASIN not found")
         return false;
     }
 
     let textArea = document.createElement("textarea");
-    textArea.value = site + "/dp/" + selected.value
+    textArea.value = site + "/dp/" + asin.value
     document.body.appendChild(textArea);
     textArea.select();
     document.execCommand("copy");

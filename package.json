@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/lowply/copy-amazon-link#readme",
   "dependencies": {
-    "encodeurl": "^1.0.2",
     "strip-indent": "^3.0.0",
     "terser": "^4.3.1"
   }

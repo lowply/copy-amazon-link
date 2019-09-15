@@ -1,13 +1,12 @@
 'use strict';
 
 const fs = require('fs');
-const encodeUrl = require('encodeurl')
 const Terser = require("terser");
 const stripIndent = require('strip-indent');
 
 function main() {
     const code = fs.readFileSync("copy-amazon-link.js", {encoding: "utf-8"});
-    const out = "javascript:(function(){" + encodeUrl(Terser.minify(code).code) + "})();"
+    const out = Terser.minify(code, {mangle: false, compress: false, warnings: true}).code
     const md = `
         # Copy Amazon link bookmarklet
 
