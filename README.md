@@ -13,7 +13,7 @@ Get the short URL of the current product in Amazon
 Requires Node.js to build the bookmarklet.
 
 1. Clone the repo and `cd` into the directory
-1. Make changes to `copy-amazon-link.js`
+1. Make changes to `src/bookmarklet.js`
 1. Run `npm install && npm run compile`
 
 ## Development status
