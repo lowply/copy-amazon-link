@@ -4,7 +4,7 @@
   "description": "Get the short URL of the current product in Amazon",
   "main": "main.js",
   "scripts": {
-    "compile": "node main.js"
+    "build": "node main.js"
   },
   "repository": {
     "type": "git",
