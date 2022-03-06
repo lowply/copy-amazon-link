@@ -1,6 +1,6 @@
 {
   "name": "get-amazon-link",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get the short URL of the current product in Amazon",
   "main": "main.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/lowply/copy-amazon-link#readme",
   "dependencies": {
-    "ejs": "^2.7.1",
-    "terser": "^4.3.1"
+    "ejs": "^3.1.6",
+    "terser": "^5.12.0"
   }
 }
