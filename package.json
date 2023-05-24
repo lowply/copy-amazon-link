@@ -1,7 +1,7 @@
 {
   "name": "get-amazon-link",
-  "version": "0.0.2",
-  "description": "Get the short URL of the current product in Amazon",
+  "version": "0.0.3",
+  "description": "Get the short URL of the current product in Amazon.co.jp",
   "main": "main.js",
   "scripts": {
     "build": "node main.js"
@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/lowply/copy-amazon-link#readme",
   "dependencies": {
-    "ejs": "^3.1.6",
-    "terser": "^5.12.0"
+    "bookmarkleter": "^1.1.0"
   }
 }

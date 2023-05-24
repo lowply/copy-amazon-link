@@ -1,21 +1,13 @@
-'use strict';
-
-const fs = require("fs");
-const { minify } = require("terser");
-const ejs = require("ejs");
-
-async function main() {
-    const code = fs.readFileSync("src/bookmarklet.js", {encoding: "utf-8"});
-    const result = await minify(code, { sourceMap: false });
-    const encoded = encodeURI(result.code)
-
-    ejs.renderFile("src/index.ejs", {src: encoded}, function(err, out){
-        if (err != null) {
-            console.log(err);
-            return false;
-        }
-        fs.writeFileSync("docs/index.md", out, "utf8");
-    })
-}
-
-main()
+const bookmarkleter = require('bookmarkleter')
+const fs = require('fs')
+const code = fs.readFileSync("src.js", "utf8", (err) => {
+    if (err) throw err;
+})
+const bookmarklet = bookmarkleter(code, {
+    "iife": true,
+    "mangleVars": true,
+    "transpile": false
+})
+fs.writeFile("bookmarklet.js", bookmarklet, (err) => {
+    if (err) throw err;
+})

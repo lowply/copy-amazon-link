@@ -1,21 +1,13 @@
 # Copy Amazon Link bookmarklet
 
-Get the short URL of the current product in Amazon
+Get the short URL of the current product in Amazon.co.jp.
 
 ## Usage
 
-1. Visit [lowply.github.io/copy-amazon-link](https://lowply.github.io/copy-amazon-link/)
-1. Drag the link to your bookmark bar
-1. Click bookmarklet on a page to get the link on your clipboard
+View the [bookmarklet.js](/bookmarklet.js) file and click the "Copy raw file" icon to copy the bookmarklet into your clipboard.
 
-## Developing locally
+## Local development
 
-Requires Node.js to build the bookmarklet.
-
-1. Clone the repo and `cd` into the directory
-1. Make changes to `src/bookmarklet.js`
-1. Run `npm install && npm run build`
-
-## Development status
-
-It works for me. It may not work in your browser of choice, and may break at any time if Amazon's markup changes.
+```console
+npm run build
+```
