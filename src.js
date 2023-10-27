@@ -1,5 +1,5 @@
-if (window.location.host != "www.amazon.co.jp") {
-    console.log("This bookmarklet only works on Amazon.co.jp");
+if (window.location.host != "www.amazon.com" && window.location.host != "www.amazon.co.jp") {
+    console.error("This bookmarklet only works on Amazon.com or Amazon.co.jp");
     return false;
 }
 
