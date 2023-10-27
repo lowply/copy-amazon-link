@@ -1,20 +1,14 @@
-if (window.location.host != "www.amazon.co.jp") {
-    console.log("This bookmarklet only works on Amazon.co.jp");
+if (window.location.host != "www.amazon.com" && window.location.host != "www.amazon.co.jp") {
+    console.error("This bookmarklet only works on Amazon.com or Amazon.co.jp");
     return false;
 }
 
-// ASIN
-const ASIN = document.querySelector("input#ASIN").value;
+const ASIN = document.querySelector("input#ASIN");
 
-if (ASIN == null){
-    console.log("ASIN not found");
+if (!ASIN) {
+    console.error("ASIN not found");
     return false;
 }
 
-let textArea = document.createElement("textarea");
-textArea.value = "https://www.amazon.co.jp/dp/" + ASIN
-document.body.appendChild(textArea);
-textArea.select();
-document.execCommand("copy");
-console.log("Amazon link " + textArea.value + " has been copied to your clipboard!");
-textArea.remove();
+const link = `https://${window.location.host}/dp/${ASIN.value}`
+navigator.clipboard.writeText(`https://${window.location.host}/dp/${ASIN.value}`);

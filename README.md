@@ -1,6 +1,6 @@
 # Copy Amazon Link bookmarklet
 
-Get the short URL of the current product in Amazon.co.jp.
+Get the short URL of the current product in Amazon.com and Amazon.co.jp.
 
 ## Usage
 

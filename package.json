@@ -1,7 +1,7 @@
 {
   "name": "get-amazon-link",
-  "version": "0.0.3",
-  "description": "Get the short URL of the current product in Amazon.co.jp",
+  "version": "0.0.4",
+  "description": "Get the short URL of the current product in Amazon.com and Amazon.co.jp",
   "main": "main.js",
   "scripts": {
     "build": "node main.js"
